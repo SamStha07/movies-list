@@ -22,7 +22,8 @@
         "react",
         "react-hooks",
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "jest"
     ],
     "settings": {
         "import/resolver": {
