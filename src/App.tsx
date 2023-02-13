@@ -1,9 +1,9 @@
 import React from 'react';
 
-const App = () => {
-  let help: number = 123;
+function App() {
+	const help = '12';
 
-  return <div>Hello World</div>;
-};
+	return <div>Hello World {help}</div>;
+}
 
 export default App;
