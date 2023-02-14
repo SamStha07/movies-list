@@ -1,9 +1,16 @@
 import React, { FC } from 'react';
 import { IDirector } from '../../types/movie.types';
+import ImgWithFallback from '../image/image.component';
 
-const DirectorModalContent: FC<IDirector> = ({ image, bio }) => (
+const DirectorModalContent: FC<IDirector> = ({ image, name, bio }) => (
 	<div>
-		<img src={image} alt="" className="w-full h-[144px] object-cover" />
+		<ImgWithFallback
+			altName={name}
+			fallback={image.large}
+			src={image.small}
+			className="w-full h-[144px] object-cover"
+			loading="lazy"
+		/>
 		<p className="text-sm mt-5">{bio}</p>
 	</div>
 );

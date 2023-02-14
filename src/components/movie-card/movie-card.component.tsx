@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { IMovie } from '../../types/movie.types';
+import ImgWithFallback from '../image/image.component';
 import Modal from '../modal/modal.component';
 import DirectorModalContent from './director-modal-content.component';
 
@@ -30,12 +31,19 @@ const MovieCard: FC<IMovieProps> = ({ data }) => {
 				}`}
 			>
 				<Link to={redirectLink}>
-					<img
-						src={data.image}
-						alt=""
+					<ImgWithFallback
+						altName={data.name}
+						fallback={data.image.large}
+						src={data.image.small}
 						className="w-[152px] h-[128px] object-cover cursor-pointer"
 						loading="lazy"
 					/>
+					{/* <img
+						src={data.image.large}
+						alt=""
+						className="w-[152px] h-[128px] object-cover cursor-pointer"
+						loading="lazy"
+					/> */}
 				</Link>
 				<div className="mt-[10px] flex-1">
 					<Link to={redirectLink}>
@@ -60,6 +68,7 @@ const MovieCard: FC<IMovieProps> = ({ data }) => {
 					<DirectorModalContent
 						image={data.director.image}
 						bio={data.director.bio}
+						name={data.director.name}
 					/>
 				</Modal>
 			)}
