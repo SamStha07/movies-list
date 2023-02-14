@@ -17,9 +17,10 @@ module.exports = {
 		open: true,
 		hot: true,
 		liveReload: true,
+		historyApiFallback: true,
 	},
 	resolve: {
-		extensions: ['.js', '.jsx', '.tsx', '.ts', '.json'],
+		extensions: ['.js', '.jsx', '.tsx', '.ts'],
 	},
 	module: {
 		rules: [
@@ -31,6 +32,10 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader', 'postcss-loader'],
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: 'asset/resource',
 			},
 		],
 	},

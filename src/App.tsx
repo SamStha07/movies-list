@@ -1,13 +1,17 @@
 import React from 'react';
+import Toast from './components/toast/toast.component';
+import { ToastProvider } from './context/toast.context';
+import ErrorBoundary from './layout/error-boundary.layout';
+import AppRoute from './routes';
 
 function App() {
-	const help = '12';
-
 	return (
-		<div>
-			Hello World {help}
-			{/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
-		</div>
+		<ErrorBoundary>
+			<ToastProvider>
+				<AppRoute />
+				<Toast />
+			</ToastProvider>
+		</ErrorBoundary>
 	);
 }
 
