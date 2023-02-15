@@ -48,7 +48,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build
+          npm install
           npx webpack
 
   deployment:
