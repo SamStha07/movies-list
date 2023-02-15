@@ -16,3 +16,7 @@ export interface IMovie {
 	image: IImage;
 	director: IDirector;
 }
+
+export interface ISlug {
+	slug: string | undefined;
+}
