@@ -11,10 +11,6 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-
     steps:
       - name: clone repository
         uses: actions/checkout@v3
