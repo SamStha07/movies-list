@@ -23,6 +23,7 @@ const ImgWithFallback: FC<IImageProps> = ({
 		<img
 			src={fallback}
 			alt={`${altName}-img`}
+			aria-label={altName}
 			className={className}
 			loading={loading}
 			{...rest}

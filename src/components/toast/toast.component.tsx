@@ -15,6 +15,7 @@ const Toast = () => {
 					hidden: !toast,
 				}
 			)}
+			data-testid="toast-id"
 		>
 			<TickIcon />
 			<p className="text-white">Add to favourite</p>

@@ -38,12 +38,6 @@ const MovieCard: FC<IMovieProps> = ({ data }) => {
 						className="w-[152px] h-[128px] object-cover cursor-pointer"
 						loading="lazy"
 					/>
-					{/* <img
-						src={data.image.large}
-						alt=""
-						className="w-[152px] h-[128px] object-cover cursor-pointer"
-						loading="lazy"
-					/> */}
 				</Link>
 				<div className="mt-[10px] flex-1">
 					<Link to={redirectLink}>
@@ -51,7 +45,10 @@ const MovieCard: FC<IMovieProps> = ({ data }) => {
 							{data.name}
 						</h3>
 					</Link>
-					<span className="block text-grayColor text-base capitalize mt-2 mb-1 leading-normal">
+					<span
+						data-testid="category-element"
+						className="block text-grayColor text-base capitalize mt-2 mb-1 leading-normal"
+					>
 						{data.category}
 					</span>
 					<button

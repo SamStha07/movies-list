@@ -23,7 +23,9 @@ const MovieDetailsPage = () => {
 	return (
 		<div>
 			<MovieCard data={movieDetails} />
-			<p className="mt-[14px] text-sm">{movieDetails.description}</p>
+			<p data-testid="movie-description-id" className="mt-[14px] text-sm">
+				{movieDetails.description}
+			</p>
 
 			<button
 				type="button"
