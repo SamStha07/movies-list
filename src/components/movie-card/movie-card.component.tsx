@@ -13,6 +13,7 @@ const MovieCard: FC<IMovieProps> = ({ data }) => {
 	const { slug } = useParams();
 	const [open, setOpen] = useState(false);
 
+	// will toggle the state=true/false
 	const handleToggle = () => {
 		setOpen((prev) => !prev);
 	};
