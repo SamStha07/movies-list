@@ -30,8 +30,8 @@ jobs:
         env:
           CI: true
 
-  build:
-    name: Build
+  packages:
+    name: Install Packages
     runs-on: ubuntu-latest
 
     strategy:
@@ -51,10 +51,25 @@ jobs:
           npm install
           npx webpack
 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clone repository
+        uses: actions/checkout@v3
+
+      - name: build run
+        run: |
+          echo "Running build..."
+          npm run build
+        env:
+          CI: true
+
   deployment:
     name: Deployment
     runs-on: ubuntu-latest
-    needs: [lint, build]
+    needs: [lint, packages, build]
     steps:
       - name: Install dependencies
         run: |
