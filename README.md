@@ -1,6 +1,10 @@
-git clone https://github.com/SamStha07/frontend-coding-challenge.git
+# Movies List
+
+## Clone the project
+
+git clone https://github.com/SamStha07/movies-list.git
 <br/>
-cd frontend-coding-challenge
+cd movies-list
 
 
 
