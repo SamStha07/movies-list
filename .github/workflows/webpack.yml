@@ -48,8 +48,7 @@ jobs:
 
       - name: Build
         run: |
-          npm build
-          npx webpack
+          npm run build
 
   deployment:
     name: Deployment
