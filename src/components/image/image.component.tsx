@@ -12,14 +12,14 @@ interface IImageProps {
 const ImgWithFallback: FC<IImageProps> = ({
 	src,
 	fallback,
-	type = 'image/webp',
+	// type = 'image/webp',
 	altName,
 	className,
 	loading,
 	...rest
 }) => (
 	<picture>
-		<source srcSet={src} type={type} />
+		{/* <source srcSet={src} type={type} /> */}
 		<img
 			src={fallback}
 			alt={`${altName}-img`}
